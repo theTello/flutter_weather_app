@@ -3,9 +3,11 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 /// GoRouter configuration
 final _kRouter = GoRouter(
-  initialLocation: '/',
-  routes: [],
-);
+    initialLocation: '/',
+    routes: [],
+    redirect: (context, state) {
+      return null;
+    });
 
 /// create a provider to access the go router configuration
 final goRouterProvider = Provider<GoRouter>(
